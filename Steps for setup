@@ -38,4 +38,5 @@ ES_HEAP_SIZE="512M"
 
 Ref:
 https://devopscube.com/how-to-setup-an-elasticsearch-cluster
+https://github.com/devopscube/elasticsearch-cluster/blob/master/es-client/elasticsearch.yml
 
