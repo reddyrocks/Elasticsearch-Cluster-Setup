@@ -1,0 +1,19 @@
+Elasticsearch Cluster
+Create 3 vms and change the host name
+es-client-01
+es-master-01
+es-data-01
+
+Go to the /etc/hosts on all nodes and make entries for all the nodes for the hostnames
+like 
+ip addr host-name
+
+
+Setting up the client node
+a) Install Latest Java
+b)check java version
+	java -version
+c) Install elasticsearch
+d) check elasticsearch installed or not
+	curl https://localhost:9200
+imp configuarations  elasticsearch.yml file
