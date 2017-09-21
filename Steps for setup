@@ -16,4 +16,26 @@ b)check java version
 c) Install elasticsearch
 d) check elasticsearch installed or not
 	curl https://localhost:9200
-imp configuarations  elasticsearch.yml file
+imp configuarations  elasticsearch.yml file on node 1 i.e es-client-01
+##node section
+cluster.name devops-production
+node.name: es-client-01
+node.client: true
+node.data: false
+##discover section
+discoverry.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["es-client-01", "es-master-01",  "es-data-01"]
+###system level config 
+/etc/security/limits.conf 
+
+It is recommended to have the heap size as half as the RAM. This tutorial is based on 1 GB RAM VM. So we will configure 512 MB swap space.
+
+You need to set an environment variable for elasticsearch heap size. You can do this by editing the /etc/environment file. The file should look like the following.
+
+
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+ES_HEAP_SIZE="512M"
+
+Ref:
+https://devopscube.com/how-to-setup-an-elasticsearch-cluster
+
